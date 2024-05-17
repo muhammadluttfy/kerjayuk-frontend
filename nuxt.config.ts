@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/eslint-module',
     'nuxt-swiper',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    '@nuxt/image'
   ],
 
   ui: {

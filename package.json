@@ -12,6 +12,7 @@
   "dependencies": {
     "@iconify-json/mdi": "^1.1.66",
     "@iconify-json/ph": "^1.1.13",
+    "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.16.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "nuxt": "^3.11.2",

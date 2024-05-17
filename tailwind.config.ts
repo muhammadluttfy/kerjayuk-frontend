@@ -10,6 +10,14 @@ export default <Partial<Config>>{
     './app.vue'
   ],
   theme: {
+    extend: {
+      colors: {
+        lightColor: '#F6F8FD',
+        darkColor: '#34364a',
+        secondaryColor: '#999aa4',
+        dangerColor: '#E7242B'
+      }
+    }
   },
   plugins: [
     require('@tailwindcss/typography')

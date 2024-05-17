@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="font-poppins">
-    Layout: default
+  <div class="font-poppins min-h-screen relative">
+    <NavigationTopBarComponent />
     <slot />
   </div>
 </template>
