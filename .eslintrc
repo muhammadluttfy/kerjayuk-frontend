@@ -1,0 +1,10 @@
+{
+    "extends": [
+        "@nuxtjs/eslint-config-typescript"
+    ],
+    "rules": {
+        "quotes": ["error", "single"],
+        "vue/multi-word-component-names": 0,
+        "vue/no-v-html": 0
+    }
+}
