@@ -10,6 +10,8 @@ useSeoMeta({
   description: 'Solusi absensi modern untuk bisnis Anda. Lacak kehadiran karyawan dengan mudah dan akurat. Absensi lebih mudah, lebih efisien dengan KerjaYuk!'
 })
 
+const device = useDevice()
+
 const pcsNews = [
   {
     avatar: 'https://i.ibb.co/d0PRzss/4-avatar-children.webp',
@@ -43,6 +45,62 @@ const pcsNews = [
   }
 ]
 
+const onlineMembers = [
+  {
+    avatar: 'https://i.pravatar.cc/150?img=1',
+    name: 'Alice',
+    location: 'BSD'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=2',
+    name: 'Bob',
+    location: 'WFH'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=3',
+    name: 'Charlie',
+    location: 'Sahid'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=4',
+    name: 'Dana',
+    location: 'BSD'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=5',
+    name: 'Eve',
+    location: 'WFH'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=6',
+    name: 'Frank',
+    location: 'Sahid'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=7',
+    name: 'Grace',
+    location: 'BSD'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=8',
+    name: 'Hank',
+    location: 'WFH'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=9',
+    name: 'Ivy',
+    location: 'Sahid'
+  },
+  {
+    avatar: 'https://i.pravatar.cc/150?img=10',
+    name: 'Jack',
+    location: 'BSD'
+  }
+]
+
+const displayedMembers = computed(() => {
+  return device.isMobile ? onlineMembers.slice(0, 6) : onlineMembers.slice(0, 8)
+})
 </script>
 
 <template>
@@ -50,7 +108,7 @@ const pcsNews = [
     <!-- START:: Profile Card Section -->
     <section class="mb-8">
       <UContainer>
-        <h3 class="text-base text-darkColor mb-4">
+        <h3 class="text-base mb-4">
           Hi, Good Morning!
         </h3>
         <PartialProfileCardComponent />
@@ -61,7 +119,7 @@ const pcsNews = [
     <!-- START:: Today Activity Section -->
     <section class="mb-8">
       <UContainer>
-        <h1 class="text-base font-semibold text-darkColor mb-4">
+        <h1 class="text-base font-semibold mb-4">
           Today's activity
         </h1>
         <div class="flex justify-between items-start gap-4 px-8">
@@ -100,7 +158,7 @@ const pcsNews = [
     <!-- START:: PCS News Section -->
     <section class="mb-8">
       <UContainer class="mb-4">
-        <h1 class="text-base font-semibold text-darkColor">
+        <h1 class="text-base font-semibold">
           PCS News
         </h1>
       </UContainer>
@@ -116,7 +174,47 @@ const pcsNews = [
       </Swiper>
     </section>
     <!-- END:: PCS News Section -->
+
+    <!-- START:: Today Activity Section -->
+    <section class="mb-8">
+      <UContainer>
+        <h1 class="text-base font-semibold mb-4">
+          Online
+        </h1>
+        <div class="shadow-md rounded-lg p-4 w-full flex justify-center">
+          <div class="flex items-center overflow-hidden">
+            <div class="relative flex items-center overflow-x-auto">
+              <div
+                v-for="(item, index) in displayedMembers"
+                :key="index"
+                class="relative inline-block z-10 text-center"
+                :class="{'-ml-1.5': index !== 0}"
+              >
+                <UAvatar
+                  size="lg"
+                  :src="item?.avatar"
+                  class="ring ring-white mb-2.5 rounded-full"
+                  :alt="item?.name"
+                />
+                <p class="text-xs font-semibold">
+                  {{ item?.name }}
+                </p>
+                <p class="text-[8px]">
+                  {{ item?.location }}
+                </p>
+              </div>
+              <div
+                class="bg-gradient-to-b from-[#E7242B] to-[#C41060] p-[18px] rounded-full text-xs text-white z-0 -ml-1 text-center -mt-8"
+              >
+                +5
+              </div>
+            </div>
+          </div>
+        </div>
+      </UContainer>
+    </section>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

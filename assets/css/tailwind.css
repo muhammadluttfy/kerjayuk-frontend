@@ -5,3 +5,9 @@
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
+
+.card-shadow {
+  -webkit-box-shadow: 10px 10px 80px -12px rgba(0,0,0,0.5);
+  -moz-box-shadow: 10px 10px 80px -12px rgba(0,0,0,0.5);
+  box-shadow: 10px 10px 80px -12px rgba(0,0,0,0.5);
+}
