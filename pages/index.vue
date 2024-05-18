@@ -99,7 +99,7 @@ const onlineMembers = [
 ]
 
 const displayedMembers = computed(() => {
-  return device.isMobile ? onlineMembers.slice(0, 6) : onlineMembers.slice(0, 8)
+  return device.isMobile ? onlineMembers.slice(0, 7) : onlineMembers.slice(0, 8)
 })
 </script>
 
