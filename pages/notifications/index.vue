@@ -104,7 +104,7 @@ const notifications = [
 ]
 
 function handleReadNotification (item: any) {
-  if (item?.isRead) {
+  if (item?.isRead === true) {
     // handle read notification
   }
 }
@@ -122,7 +122,7 @@ function handleReadNotification (item: any) {
     <section>
       <div class="grid grid-cols-12">
         <div v-for="(item, index) in notifications" :key="index" class="col-span-12">
-          <div class="py-3 bg-white" :class="{'bg-blue-100 cursor-pointer': item?.isRead}" @click="handleReadNotification(item)">
+          <div class="py-3 bg-white" :class="{'bg-blue-100 cursor-pointer': item?.isRead === true}" @click="handleReadNotification(item)">
             <UContainer class="flex items-start gap-3.5">
               <div class="bg-gradient-to-r from-[#E7242B] to-[#C41060] rounded-lg p-3 text-white">
                 .......
