@@ -14,7 +14,7 @@
           variant="none"
           class="p-3"
         >
-          <UChip size="xl" color="red" :text="6">
+          <UChip size="xl" color="red" :text="7">
             <UIcon name="i-ph-bell-duotone" class="h-5 w-5 text-gray-500" />
           </UChip>
         </UButton>
