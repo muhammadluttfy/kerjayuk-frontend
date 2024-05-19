@@ -2,7 +2,7 @@
 
 <template>
   <UContainer>
-    <div class="sticky bg-white top-0 py-5 flex items-center justify-between z-50">
+    <div class="bg-white py-5 flex items-center justify-between">
       <h1 class="text-2xl font-bold text-dangerColor">
         KerjaYuk!
       </h1>

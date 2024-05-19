@@ -99,7 +99,7 @@ const onlineMembers = [
 ]
 
 const displayedMembers = computed(() => {
-  return device.isMobile ? onlineMembers.slice(0, 7) : onlineMembers.slice(0, 8)
+  return device.isMobile ? onlineMembers.slice(0, 6) : onlineMembers.slice(0, 7)
 })
 </script>
 
@@ -175,7 +175,7 @@ const displayedMembers = computed(() => {
     </section>
     <!-- END:: PCS News Section -->
 
-    <!-- START:: Today Activity Section -->
+    <!-- START:: Online Member Section -->
     <section class="mb-8">
       <UContainer>
         <h1 class="text-base font-semibold mb-4">
@@ -213,6 +213,7 @@ const displayedMembers = computed(() => {
         </div>
       </UContainer>
     </section>
+    <!-- END:: Online Member Section -->
   </div>
 </template>
 
