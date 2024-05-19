@@ -8,10 +8,10 @@
           <NuxtImg src="https://i.ibb.co.com/zGqkM5t/1-avatar-man.webp" width="60" height="60" class="rounded-full" />
           <div>
             <h1 class="text-base font-semibold">
-              Tabay
+              Muhammad Lutfi
             </h1>
             <p class="text-[10px]">
-              UI/UX Designer
+              Front-End Web Developer
             </p>
           </div>
         </div>
